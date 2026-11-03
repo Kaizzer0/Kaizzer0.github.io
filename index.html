@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio cá nhân của Nguyễn Tấn Đức. Giới thiệu bản thân và các dự án lập trình.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Nguyễn Tấn Đức | Portfolio</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1020;--panel:#141c30;--line:#293653;--text:#eef4ff;--muted:#a7b6ce;--blue:#7bb5ff;--mint:#75e3c0}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse 75% 32% at 78% 0%,#18345b 0%,transparent 75%),var(--bg);
+         color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:3px solid var(--mint);outline-offset:4px}
+    .wrap{width:min(1060px,calc(100% - 40px));margin:auto}
+    header{border-bottom:1px solid #ffffff16}
+    .topbar{display:flex;justify-content:space-between;align-items:center;min-height:76px;gap:18px}
+    .brand{font-weight:800;letter-spacing:.2px}.brand span{color:var(--mint)}
+    nav{display:flex;gap:22px;flex-wrap:wrap}
+    nav a{color:var(--muted);font-size:14px}nav a:hover{color:var(--text)}
+    .hero{padding:105px 0 93px;max-width:780px}
+    .eyebrow{display:inline-block;color:var(--mint);border:1px solid #75e3c045;background:#75e3c00b;
+             border-radius:50px;padding:5px 13px;font-size:13px;font-weight:650}
+    h1{font-size:clamp(37px,6vw,66px);line-height:1.15;letter-spacing:-2px;margin:26px 0 19px}
+    h1 em{font-style:normal;color:var(--blue)}
+    .lead{color:var(--muted);font-size:clamp(16px,2vw,19px);max-width:690px;margin:0 0 28px}
+    .actions{display:flex;flex-wrap:wrap;gap:13px}
+    .btn{display:inline-flex;align-items:center;padding:11px 21px;border-radius:10px;border:1px solid var(--line);font-weight:650}
+    .btn.primary{background:#79adff;color:#0b1425;border-color:#79adff}
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
+    section{padding:36px 0 64px}
+    h2{font-size:30px;letter-spacing:-.6px;margin:0 0 12px}
+    .intro{color:var(--muted);max-width:750px;margin:0 0 25px}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .card{background:linear-gradient(145deg,#17233c,#11192b);border:1px solid var(--line);
+          border-radius:18px;padding:27px;min-height:218px}
+    .card h3{margin:14px 0 10px;font-size:21px}
+    .card p{color:var(--muted);margin:0 0 18px}
+    .tag{font-size:12px;color:var(--mint);background:#75e3c010;border:1px solid #75e3c037;
+         padding:5px 10px;border-radius:99px}
+    .project-link{color:var(--blue);font-weight:650}
+    .contact{background:#111a2d;border:1px solid var(--line);border-radius:18px;padding:30px}
+    .contact p{color:var(--muted)}
+    footer{padding:24px 0 34px;border-top:1px solid #ffffff18;color:var(--muted);font-size:13px}
+    @media(max-width:640px){.topbar{align-items:flex-start;flex-direction:column;padding:19px 0}
+      nav{gap:15px}.hero{padding:72px 0}.cards{grid-template-columns:1fr}
+      .card,.contact{padding:22px}h1{letter-spacing:-1px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="#home">NTD<span>.</span> Portfolio</a>
+      <nav aria-label="Điều hướng chính">
+        <a href="#about">Giới thiệu</a>
+        <a href="#projects">Dự án</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+  <main id="home" class="wrap">
+    <div class="hero">
+      <span class="eyebrow">Xin chào, chào mừng bạn!</span>
+      <h1>Tôi là <em>Nguyễn Tấn Đức.</em></h1>
+      <p class="lead">Tôi yêu thích lập trình, phát triển phần mềm và tìm hiểu các giải pháp công nghệ.
+         Đây là nơi tôi giới thiệu những dự án và trải nghiệm học tập của mình.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Xem dự án</a>
+        <a class="btn" href="https://github.com/Kaizzer0" target="_blank" rel="noopener noreferrer">GitHub của tôi ↗</a>
+      </div>
+    </div>
+    <section id="about">
+      <h2>Giới thiệu</h2>
+      <p class="intro">Tôi tập trung vào phát triển phần mềm, xử lý dữ liệu và xây dựng ứng dụng.
+        Tôi ghi lại các sản phẩm đã thực hiện trên GitHub để chia sẻ và tiếp tục cải thiện.</p>
+    </section>
+    <section id="projects">
+      <h2>Dự án</h2>
+      <p class="intro">Một số nội dung đang phát triển và cập nhật.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="tag">Python · Streamlit · Neo4j</span>
+          <h3>AD Stealthiest Attack Path</h3>
+          <p>Ứng dụng nghiên cứu phân tích đường đi trên đồ thị Active Directory, có giao diện trực quan.</p>
+          <a class="project-link" href="https://github.com/Kaizzer0/ad-attack-path-prediction" target="_blank" rel="noopener noreferrer">Xem mã nguồn trên GitHub ↗</a>
+        </article>
+        <article class="card">
+          <span class="tag">Sắp cập nhật</span>
+          <h3>Các dự án tiếp theo</h3>
+          <p>Tôi sẽ bổ sung các dự án mới, kết quả học tập và bài viết kỹ thuật tại đây.</p>
+          <a class="project-link" href="https://github.com/Kaizzer0?tab=repositories" target="_blank" rel="noopener noreferrer">Xem danh sách repository ↗</a>
+        </article>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="contact">
+        <h2>Kết nối với tôi</h2>
+        <p>Bạn quan tâm đến dự án hoặc muốn trao đổi về lập trình? Hãy ghé qua GitHub của tôi.</p>
+        <a class="btn primary" href="https://github.com/Kaizzer0" target="_blank" rel="noopener noreferrer">Truy cập GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© 2026 Nguyễn Tấn Đức · ntduc.id.vn</div></footer>
+</body>
+</html>

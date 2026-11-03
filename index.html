@@ -147,6 +147,93 @@
       .footer-row{flex-direction:column;align-items:flex-start;gap:5px}
     }
     @media(prefers-reduced-motion:reduce) {html{scroll-behavior:auto}.btn,.project-card,.skill-card,.contact-link{transition:none}}
+
+    /* 2026-11-04: đồng bộ bố cục Portfolio theo thiết kế Framer cập nhật. */
+    :root { --content: 1168px; }
+    .header-inner { gap: 28px; }
+    .nav-links { gap: clamp(16px, 2.1vw, 29px); }
+    .nav-links a { font-size: 12px; white-space: nowrap; }
+    .hero { padding: 55px 0 53px; }
+    .hero-grid { grid-template-columns: minmax(0,1.28fr) minmax(270px,.72fr); gap: clamp(32px,5vw,84px); }
+    .hero-art { max-width: 370px; border-radius: 26px; }
+    .intro-small { margin: 18px 0 4px; }
+    .hero-description { margin-bottom: 18px; }
+    .note { margin-top: 12px; }
+    #projects { padding-top: 75px; padding-bottom: 78px; }
+    .projects-grid { grid-template-columns: 1fr; gap: 22px; margin-top: 33px; }
+    .project-card {
+      display: grid; grid-template-columns: minmax(0, 42%) minmax(0, 58%);
+      align-items: stretch; padding: 13px; width: 100%; min-height: 294px;
+      border-radius: 20px; overflow: hidden; transition: transform .2s, box-shadow .2s;
+    }
+    .project-art { height: auto; min-height: 275px; border-radius: 13px; display: grid; place-items: center; }
+    .project-art svg { width: 100%; height: 100%; }
+    .project-body { min-width: 0; padding: 30px clamp(22px,3.4vw,47px) 24px; }
+    .project-type { font-size: 11px; margin-bottom: 13px; }
+    .project-card h3 { font-size: clamp(20px,2.1vw,27px); line-height: 1.36; letter-spacing: -.025em; margin-bottom: 12px; }
+    .project-card p { font-size: 14px; line-height: 1.75; margin-bottom: 12px; }
+    .project-tech { font-size: 12px!important; }
+    .project-link { font-size: 12px; padding-top: 16px; }
+    #about { padding-top: 72px; padding-bottom: 71px; }
+    #about .about-grid { margin-top: 20px; }
+    #skills { padding-top: 82px; padding-bottom: 90px; }
+    #journey { padding-top: 79px; }
+    #contact { padding-top: 88px; }
+    @media (max-width: 1024px) and (min-width: 701px) {
+      .container { width: min(var(--content), calc(100% - 54px)); }
+      .header-inner { min-height: 77px; gap: 16px; }
+      .nav-links { gap: clamp(10px,1.6vw,20px); }
+      .nav-links a { font-size: 11px; }
+      .hero { padding: 53px 0 54px; }
+      .hero-grid { grid-template-columns: minmax(0,1.16fr) minmax(230px,.84fr); gap: 25px; }
+      .hero-art { max-width: 340px; }
+      .projects-grid { gap: 18px; }
+      .project-card { grid-template-columns: 43% 57%; min-height: 250px; }
+      .project-art { height: auto; min-height: 234px; }
+      .project-body { padding: 18px 22px 16px; }
+      .project-card h3 { font-size: 19px; line-height: 1.35; }
+      .project-card p { font-size: 13px; line-height: 1.65; }
+      .project-type { font-size: 10px; margin-bottom: 9px; }
+      .project-link { padding-top: 10px; }
+    }
+    @media (max-width: 700px) {
+      html { scroll-padding-top: 140px; }
+      .container { width: calc(100% - 36px); }
+      .header-inner { padding: 14px 0 11px; gap: 12px; flex-direction: column; align-items: stretch; min-height: 0; }
+      .brand { justify-content: center; }
+      .nav-links {
+        display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 5px 8px;
+        width: 100%; max-width: 100%; padding: 0;
+        overflow: visible; white-space: normal; text-align: center;
+      }
+      .nav-links a { display: block; font-size: 11px; padding: 6px 3px; border-radius: 7px; }
+      .nav-links a:hover { background: #eceafa; }
+      .hero { padding: 40px 0 49px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 27px; }
+      .hero-text { max-width: 580px; }
+      .hero-art { width: min(100%,390px); aspect-ratio: 1.2; justify-self: center; }
+      #projects { padding-top: 59px; padding-bottom: 65px; }
+      .projects-grid { grid-template-columns: 1fr; gap: 17px; margin-top: 24px; }
+      .project-card { display: flex; flex-direction: column; min-height: 0; padding: 10px; border-radius: 16px; }
+      .project-art { min-height: 0; height: auto; aspect-ratio: 1.8; border-radius: 10px; }
+      .project-body { padding: 20px 14px 16px; }
+      .project-card h3 { font-size: 19px; }
+      .project-card p { font-size: 13px; }
+      .project-type { font-size: 10px; }
+      .project-link { margin-top: 5px; }
+      #about { padding-top: 60px; padding-bottom: 60px; }
+      #skills, #journey, #contact { padding-top: 65px; padding-bottom: 66px; }
+      .section { padding: 65px 0; }
+      .about-grid { gap: 22px; }
+      .skills-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width: 380px) {
+      .container { width: calc(100% - 30px); }
+      .nav-links { gap: 2px 3px; }
+      .nav-links a { font-size: 10px; padding-inline: 0; }
+      .project-body { padding-inline: 9px; }
+      .skill-card { padding: 10px 8px; }
+    }
   </style>
 </head>
 <body>
@@ -157,7 +244,7 @@
         Hồ sơ cá nhân
       </a>
       <nav class="nav-links" aria-label="Điều hướng">
-        <a href="#about">Về tôi</a><a href="#skills">Kỹ năng</a><a href="#projects">Dự án</a><a href="#journey">Hành trình</a><a href="#cv">CV</a><a href="#contact">Liên hệ</a>
+        <a href="#projects">Dự án</a><a href="#about">Về tôi</a><a href="#skills">Kỹ năng</a><a href="#journey">Hành trình</a><a href="#cv">CV</a><a href="#contact">Liên hệ</a>
       </nav>
     </div>
   </header>
@@ -202,42 +289,9 @@
         </div>
       </div>
     </section>
-    <section class="section section-alt" id="about">
-      <div class="container">
-        <div class="section-label">01 / Về tôi</div>
-        <h2>Về tôi</h2>
-        <div class="about-grid">
-          <div>
-            <h3 class="about-heading">Từng bước trở thành kỹ sư phần mềm.</h3>
-            <p>Tôi đang học tập tại Đại học Cần Thơ và tìm hiểu các lĩnh vực phát triển ứng dụng web, cơ sở dữ liệu, giải thuật và kỹ thuật phần mềm. Tôi ưu tiên học qua thực hành và hoàn thiện từng dự án.</p>
-          </div>
-          <div>
-            <div class="about-point"><h3>Định hướng nghề nghiệp</h3><p>Phát triển kỹ năng xây dựng hệ thống phần mềm, tư duy giải quyết vấn đề và khả năng làm việc nhóm.</p></div>
-            <div class="about-point"><h3>Cách tôi học và làm</h3><p>Tìm hiểu nền tảng, thử nghiệm giải pháp, đọc tài liệu và cải tiến kết quả qua từng lần thực hành.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-white" id="skills">
-      <div class="container">
-        <div class="section-label">02 / Công nghệ & công cụ</div>
-        <h2>Công nghệ & công cụ</h2>
-        <p class="section-description">Các ngôn ngữ, nền tảng và công cụ tôi đang học tập hoặc sử dụng trong những dự án.</p>
-        <div class="skills-grid">
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true">◇</div><div><h3>Java</h3><p>Ngôn ngữ lập trình</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true">{ }</div><div><h3>C/C++</h3><p>Ngôn ngữ lập trình</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true">🐍</div><div><h3>Python</h3><p>Ngôn ngữ lập trình</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true">⚛</div><div><h3>React</h3><p>Phát triển giao diện</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true" style="font-size:14px">TS</div><div><h3>TypeScript</h3><p>Phát triển ứng dụng</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v13c0 4 16 4 16 0V5M4 11c0 4 16 4 16 0M4 16c0 4 16 4 16 0"/></svg></div><div><h3>PostgreSQL</h3><p>Cơ sở dữ liệu</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="m12 2 9 10-9 10-9-10Z"/><circle cx="12" cy="7" r="1.5" fill="currentColor"/><circle cx="8" cy="13" r="1.5" fill="currentColor"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/><path d="M12 8.5 8 11.5m0 3 8 0"/></svg></div><div><h3>Git</h3><p>Quản lý phiên bản</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1-4-2-6-2m12 4v-3.5c0-1 .2-1.5-.5-2 3.2-.4 6.5-1.5 6.5-7A5.5 5.5 0 0 0 19.5 5 5 5 0 0 0 19.4 2S18 2 16 4a14 14 0 0 0-8 0C6 2 4.6 2 4.6 2a5 5 0 0 0-.1 3A5.5 5.5 0 0 0 3 8.5c0 5.5 3.3 6.6 6.5 7-.7.5-.5 1-.5 2V21"/></svg></div><div><h3>GitHub</h3><p>Lưu trữ mã nguồn</p></div></div>
-        </div>
-      </div>
-    </section>
     <section class="section section-alt" id="projects">
       <div class="container">
-        <div class="section-label">03 / Dự án nổi bật</div>
+        <div class="section-label">01 / Dự án nổi bật</div>
         <h2>Dự án nổi bật</h2>
         <p class="section-description">Một số đề tài, sản phẩm và hướng nghiên cứu tôi đã tham gia thực hiện. Các hình minh họa bên dưới thể hiện chủ đề từng dự án.</p>
         <div class="projects-grid">
@@ -262,6 +316,39 @@
         </div>
       </div>
     </section>
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-label">02 / Về tôi</div>
+        <h2>Về tôi</h2>
+        <div class="about-grid">
+          <div>
+            <h3 class="about-heading">Từng bước trở thành kỹ sư phần mềm.</h3>
+            <p>Tôi đang học tập tại Đại học Cần Thơ và tìm hiểu các lĩnh vực phát triển ứng dụng web, cơ sở dữ liệu, giải thuật và kỹ thuật phần mềm. Tôi ưu tiên học qua thực hành và hoàn thiện từng dự án.</p>
+          </div>
+          <div>
+            <div class="about-point"><h3>Định hướng nghề nghiệp</h3><p>Phát triển kỹ năng xây dựng hệ thống phần mềm, tư duy giải quyết vấn đề và khả năng làm việc nhóm.</p></div>
+            <div class="about-point"><h3>Cách tôi học và làm</h3><p>Tìm hiểu nền tảng, thử nghiệm giải pháp, đọc tài liệu và cải tiến kết quả qua từng lần thực hành.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-white" id="skills">
+      <div class="container">
+        <div class="section-label">03 / Công nghệ & công cụ</div>
+        <h2>Công nghệ & công cụ</h2>
+        <p class="section-description">Các ngôn ngữ, nền tảng và công cụ tôi đang học tập hoặc sử dụng trong những dự án.</p>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon" aria-hidden="true">◇</div><div><h3>Java</h3><p>Ngôn ngữ lập trình</p></div></div>
+          <div class="skill-card"><div class="skill-icon" aria-hidden="true">{ }</div><div><h3>C/C++</h3><p>Ngôn ngữ lập trình</p></div></div>
+          <div class="skill-card"><div class="skill-icon" aria-hidden="true">🐍</div><div><h3>Python</h3><p>Ngôn ngữ lập trình</p></div></div>
+          <div class="skill-card"><div class="skill-icon" aria-hidden="true">⚛</div><div><h3>React</h3><p>Phát triển giao diện</p></div></div>
+          <div class="skill-card"><div class="skill-icon" aria-hidden="true" style="font-size:14px">TS</div><div><h3>TypeScript</h3><p>Phát triển ứng dụng</p></div></div>
+          <div class="skill-card"><div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v13c0 4 16 4 16 0V5M4 11c0 4 16 4 16 0M4 16c0 4 16 4 16 0"/></svg></div><div><h3>PostgreSQL</h3><p>Cơ sở dữ liệu</p></div></div>
+          <div class="skill-card"><div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="m12 2 9 10-9 10-9-10Z"/><circle cx="12" cy="7" r="1.5" fill="currentColor"/><circle cx="8" cy="13" r="1.5" fill="currentColor"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/><path d="M12 8.5 8 11.5m0 3 8 0"/></svg></div><div><h3>Git</h3><p>Quản lý phiên bản</p></div></div>
+          <div class="skill-card"><div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1-4-2-6-2m12 4v-3.5c0-1 .2-1.5-.5-2 3.2-.4 6.5-1.5 6.5-7A5.5 5.5 0 0 0 19.5 5 5 5 0 0 0 19.4 2S18 2 16 4a14 14 0 0 0-8 0C6 2 4.6 2 4.6 2a5 5 0 0 0-.1 3A5.5 5.5 0 0 0 3 8.5c0 5.5 3.3 6.6 6.5 7-.7.5-.5 1-.5 2V21"/></svg></div><div><h3>GitHub</h3><p>Lưu trữ mã nguồn</p></div></div>
+        </div>
+      </div>
+    </section>
     <section class="section section-white" id="journey">
       <div class="container">
         <div class="section-label">04 / Hành trình của tôi</div>
@@ -282,7 +369,7 @@
         <div class="section-label">06 / Cùng kết nối</div>
         <h2>Cùng kết nối.</h2>
         <div class="contact-grid">
-          <div class="contact-left"><h3 class="contact-headline">Một lời chào, một cơ hội mới.</h3><p>Nếu bạn muốn trao đổi về công nghệ, dự án hoặc học tập, hãy kết nối với tôi qua GitHub.</p></div>
+          <div class="contact-left"><h3 class="contact-headline">Một lời chào, một cơ hội mới.</h3></div>
           <div class="contact-links">
             <div class="contact-link"><svg class="contact-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><strong>Email</strong><span>ntduc2005@gmail.com</span></div></div>
             <a class="contact-link" href="https://github.com/Kaizzer0" target="_blank" rel="noopener noreferrer"><svg class="contact-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 4v-3.5c0-1 .2-1.5-.5-2 3.2-.4 6.5-1.5 6.5-7A5.5 5.5 0 0 0 19.5 5 5 5 0 0 0 19.4 2S18 2 16 4a14 14 0 0 0-8 0C6 2 4.6 2 4.6 2a5 5 0 0 0-.1 3A5.5 5.5 0 0 0 3 8.5c0 5.5 3.3 6.6 6.5 7-.7.5-.5 1-.5 2V21"/></svg><div><strong>GitHub</strong><span>github.com/Kaizzer0 ↗</span></div></a>
